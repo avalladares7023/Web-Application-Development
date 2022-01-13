@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Order Online</title>
+  <!--Link the external css file-->
+  <link rel="stylesheet" href="common.css">
+</head>
+
+<body>
+  <h1>The Coffee Den</h1>
+  <!--The Banner for the Cafe-->
+  <div>
+    <img src="Coffee_Den.jpg" alt="Coffee_Den.jpg">
+  </div>
+
+  <!--The Navigation section that allows the user to go to the other HTML files-->
+  <h2>Navigation</h2>
+  <nav>
+    <ul>
+      <li><a href="C:\Users\valla\Documents\Courses\Web Application & Development\Assignments\Homework4\index.html">View Home Page Here</a></li>
+      <li><a href="C:\Users\valla\Documents\Courses\Web Application & Development\Assignments\Homework4\menu.html">View Menu Here</a></li>
+    </ul>
+  </nav>
+
+  <!--Form that utilizes the essential control attributes, values, the method, action, elements, and labels-->
+  <h2>Order Form</h2>
+  <!--Uses post method and the action is "myorder.php"-->
+  <form method="post" action="myorder.php">
+    <fieldset>
+      <legend>Order Information</legend>
+      <!--Utilizes the radio buttons-->
+      <p>What would you like to order?</p>
+      <input type="radio" name="food" id="coffee" value="order">Coffee<br>
+      <input type="radio" name="food" id="espresso" value="order">Espresso<br>
+      <input type="radio" name="food" id="coffee_latte" value="order">Coffee Latte<br>
+      <input type="radio" name="food" id="cappuccino" value="order">Cappuccino<br>
+      <input type="radio" name="food" id="mocha" value="order">Mocha<br>
+      <input type="radio" name="food" id="tea" value="order">Tea<br>
+      <input type="radio" name="food" id="tea_latte" value="order">Tea Latte<br>
+      <input type="radio" name="food" id="muffin" value="order">Muffin<br>
+      <input type="radio" name="food" id="bagel" value="order">Bagel<br>
+      <input type="radio" name="food" id="donut" value="order">Donut<br>
+      <!--Utilizes the number controls-->
+      <p>How much would you like to order?</p>
+      <label for="quantity">Quantity (Limit to 4):</label>
+      <input type="number" id="quantity" name="quantity" min="1" max="4"> <br><br>
+      <!--Utilizes the choice controls-->
+      <label for="billing">Will you be dining in?</label>
+      <select name="select" id="select1">
+        <option value="dine-in">Dine-in</option>
+        <option value="take-out">Take-out/Pick-up</option>
+      </select>
+    </fieldset>
+
+    <!--Utilizes the text input controls-->
+    <fieldset class="Customer">
+      <legend>Customer Information</legend>
+        <label for="first-name">First Name:</label> <br>
+        <input type="text" name="first-name" id="first-name"/> <br>
+        <label for="last-name">Last Name:</label> <br>
+        <input type="text" name="last-name" id="last-name"/> <br>
+        <label for="phone-number">Phone Number:</label> <br>
+        <input type="text" name="phone-number" id="phone-number"/> <br>
+        <label for="email">E-mail:</label> <br>
+        <input type="text" name="email" id="email"/> <br>
+    </fieldset>
+
+    <fieldset class="Billing">
+      <legend>Billing Information</legend>
+      <label for="street-billing">Street:</label> <br>
+      <input type="text" name="street-billing" id="street-billing"/> <br>
+      <label for="city-billing">City:</label> <br>
+      <input type="text" name="city-billing" id="city-billing"/> <br>
+      <label for="state-billing">State:</label> <br>
+      <input type="text" name="state-billing" id="state-billing"/> <br>
+      <label for="zip-billing">Zip Code:</label> <br>
+      <input type="text" name="zip-billing" id="zip-billing"/> <br>
+      <label for="country-billing">Country:</label> <br>
+      <input type="text" name="country-billing" id="country-billing"/> <br>
+      <label for="credit-card">Credit Card Number:</label> <br>
+      <input type="text" name="credit-card" id="credit-card"/> <br>
+      <input type="submit" value="Submit">
+    </fieldset>
+  </form>
+
+  <footer>
+    <h2>Contact Information</h2>
+    <ul>
+      <p><b><u>Address:</u></b> 411 Coffee Bean Dr. Lakeland, FL 33813</p>
+      <p><b><u>Telephone:</u></b> (863) 911-cafe</p>
+      <p><b><u>Email:</u></b> contactus@thecoffeeden.com</p>
+    </ul>
+  </footer>
+</body>

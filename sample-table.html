@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script src="https://localhost:49506/8ee4ea609a6346c4cf34c2b621ac79ba.js"></script>
+
+  <meta charset="UTF-8">
+  <title>Table</Title>
+  <style>
+    /*Change the borders and the width of the table cells*/
+    table {
+      width: 500px;
+      border-collapse: collapse;
+    }
+
+    /*Add the border to be similar to image given*/
+    table, th, td {
+      border: 1px solid black;
+    }
+
+    /*Format the heading of the table*/
+    thead {
+      background-color: black;
+      color: white;
+      text-align: center;
+    }
+
+    /*Add the background color for the rows that specifies the kind of produce*/
+    #Fruits, #Vegetables {
+      background-color: grey;
+      text-align: center;
+    }
+
+    /*Striped pattern for the Fruits section*/
+    tr:nth-child(even)
+    {
+      background-color: #FEF2CB;
+    }
+
+    /*Striped pattern for the Vegetables section*/
+    #Vegetables ~ tr:nth-child(odd){
+      background-color: #E2F0D9;
+    }
+    #Vegetables ~ tr:nth-child(even){
+      background-color: white;
+    }
+
+    /*Format the alignment for the Quantity and Price columns*/
+    #Quantity, #Price {
+      text-align: center;
+    }
+
+    /*Format the footer of the table*/
+    tfoot {
+      font-weight: bold;
+      background-color: #F3CFA6;
+      text-align: center;
+      border-top: 3px solid black;
+    }
+
+    /*Format the alignment of Total*/
+    #Total {
+      text-align: right;
+      padding-right: 5px;
+    }
+  </style>
+</head>
+<body>
+  <table>
+    <thead>
+      <tr>
+        <td colspan="2">Name</td>
+        <td>Price</td>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr id="Fruits">
+        <td colspan="3">Fruits</td>
+      </tr>
+      <tr>
+        <td id="Quantity">1 lb</td>
+        <td>Gala Apple</td>
+        <td id="Price">$3.29</td>
+      </tr>
+      <tr>
+        <td id="Quantity">4</td>
+        <td>Banana</td>
+        <td id="Price">$0.92</td>
+      </tr>
+      <tr>
+        <td id="Quantity">2 lb</td>
+        <td>Black Plum</td>
+        <td id="Price">$1.68</td>
+      </tr>
+      <tr>
+        <td id="Quantity">1 lb</td>
+        <td>Peach</td>
+        <td id="Price">$3.29</td>
+      </tr>
+
+      <tr id="Vegetables">
+        <td colspan="3">Vegetables</td>
+      </tr>
+      <tr>
+        <td id="Quantity">1 bunch</td>
+        <td>Cilantro</td>
+        <td id="Price">$1.09</td>
+      </tr>
+      <tr>
+        <td id="Quantity">1 ct</td>
+        <td>Broccoflower</td>
+        <td id="Price">$4.41</td>
+      </tr>
+      <tr>
+        <td id="Quantity">0.5 lb</td>
+        <td>Jalapeno Pepper</td>
+        <td id="Price">$1.22</td>
+      </tr>
+    </tbody>
+
+    <tfoot>
+      <tr>
+        <td colspan="2" id="Total">Total</td>
+        <td>$15.90</td>
+      </tr>
+    </tfoot>
+  </table>
+</body>

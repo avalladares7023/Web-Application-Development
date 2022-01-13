@@ -1,0 +1,127 @@
+/*The following involves formatting for all of the web pages*/
+/*Format that applies to the entire page*/
+body {
+  background-color: bisque;
+  font-family: Palatino Linotype; /*Utilizes external fonts*/
+}
+/*Format the title for the web page*/
+h1 {
+  font-style: oblique;
+  font-size: 3.15em;
+  margin-left: 50px;
+  font-family: Georgia;
+}
+/*Shift the headings in the webpages*/
+h2 {
+  padding: 5px;
+}
+/*Formats the font size for the web pages*/
+font {
+  font-size: 1.5em;
+  line-height: 2em;
+}
+/*Resizes and adds borders to all of the images in the webpages*/
+img {
+  margin-left: 20px;
+  width: 40%;
+  height: 40%;
+  border: 2px solid black;
+}
+/*Affects the image when the cursor hovers over it*/
+img:hover {
+  /* Image cannot exceed these values
+  width: 300px;
+  height: 300px;*/
+  width: 50%;
+  height: 50%;
+  position: sticky;
+}
+
+/*The following primarily formats the elements on the menu.html file*/
+/*Formats the Hours of Operations table*/
+#OperationHours
+{
+  width: 500px;
+  border: 5px solid black;
+  background-color: #faef5e;
+}
+/*Add borders, reshift the table, and resize it*/
+#Menu, td, th
+{
+  width: 500px;
+  border-collapse: collapse;
+  border: 1px solid black;
+  text-align: center;
+  margin-left: 15px;
+}
+/*Formats the table head*/
+thead {
+  background-color: black;
+  color: white;
+}
+/*Formats the rows that specifies the kinds of product*/
+#Beverages, #Food
+{
+  text-align: center;
+  background-color: #a8ba47;
+}
+/*Striped pattern for the Menu table*/
+#same{
+  background-color: #d56233;
+}
+/*Striped pattern for the Menu and Hours of Operations table*/
+tr:nth-child(even){
+  background-color: white;
+}
+
+/*The following primarily formats the elements on the order.html*/
+/*Uses flexbox layout and formatting for the images in the menu*/
+.flex-container1, .flex-container2{
+  display: flex;
+  background-color: #6c222a;
+  margin-top: 15px;
+  margin-left: 15px;
+  margin-right: 15px;
+  padding: 20px;
+  align-items: center;
+  flex-grow: 4;
+}
+/*Formats and resizes the first and second flexbox*/
+.flex-container1 > div {
+  width: 100%;
+  height: 60%;
+}
+.flex-container2 > div {
+  width: 60%;
+  height: 60%;
+}
+/*Formats the legend or "title" of each order fieldset*/
+legend {
+  font-size: 1.15em;
+  font-weight: bold;
+  padding: 10px;
+}
+/*Formats the submission button*/
+input[type="submit"]
+{
+  margin: 15px;
+  font-size: 1.5em;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+  padding: 5px 15px;
+}
+/*Formats the */
+input[type="text"]
+{
+  font-size: 1em;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+/*Formats all of the fieldset elements*/
+fieldset
+{
+  border-color: #6c222a;
+  background-color: #e7a051;
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Amy's Task List</title>
+  <style>
+    /*Style the header*/
+    h2 {
+      font-size: 30px;
+    }
+    
+    /*Style the background of the webpage*/
+    body {
+      background-color: pink;
+    }
+
+    /* Style the "Enter" button */
+    .addButton {
+      padding: 5px;
+      background: #d9d9d9;
+      color: black;
+      text-align: center;
+      font-size: 12px;
+    }
+
+    /*Style the "Enter" button when the cursor hovers over it*/
+    .addButton:hover {
+      background-color: rgba(20, 20, 20, 0.459);
+      color: white;
+    }
+
+    #item {
+      margin-bottom: 2px;
+    }
+
+    /*When the checkbox is checked the text should turn gray*/
+    .checked {
+      color: gray;
+    }
+
+    /*Style the task list when items are entered*/
+    #taskList {
+      border: 2px solid black;
+      padding: 5px;
+      margin-top: 15px;
+      background-color: lightblue;
+    }
+
+  </style>
+</head>
+<body>
+  <!--Textbox to add items into task list-->
+  <div id="header" class="header">
+    <h2>Task List:</h2>
+    <input type="text" id="inputText" placeholder="Enter Task...">
+    <span onclick="newElement()" class="addButton">Enter</span>
+  </div>
+
+  <!--The Task list with the checkbox input-->
+  <div id="taskList" class="list">
+
+  </div>
+
+  <script>
+  // Adds the "checked" status for when clicking on a list item that 
+  // alos effects the text input
+  var list = document.querySelector('.list');
+  list.addEventListener('click', function(ev) {
+    if (ev.target.tagName === 'INPUT') {
+      ev.target.classList.toggle("current");
+      let current = document.querySelector('current');
+      let next = current.nextElementSibling;
+      next.classList.toggle('checked');
+      ev.target.classList.toggle("current");
+    }
+  }, false);
+
+  // Create a new list item when clicking on the "Add" button
+  function newElement() {
+    // Creates and Sets the checkbox
+    var check = document.createElement("INPUT");
+    check.setAttribute("type", "checkbox");
+    
+    // Creates the text from user input
+    var inputValue = document.getElementById("inputText").value;
+    var text = document.createTextNode(inputValue);
+    
+    // Creates a span that encompasses the user input
+    var span = document.createElement("SPAN");
+    span.setAttribute("id", inputValue);
+
+    // Creates the line break
+    var line = document.createElement("BR");
+    
+    //Appends the checkbox, text input, and span to the task list
+    if (inputValue === '') {
+      alert("Write Something");
+    } else {
+      document.getElementById("taskList").appendChild(check);
+      document.getElementById("taskList").appendChild(span);
+      document.getElementById(inputValue).appendChild(text)
+      document.getElementById("taskList").appendChild(line);
+    }
+    document.getElementById("inputText").value = "";
+  }
+  </script>
+</body>
+</html>
